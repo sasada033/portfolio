@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <!-- My style -->
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- Navigation -->
+            <div class="d-flex flex-column flex-md-row align-items-center p-4 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+                <h5 class="my-0 mr-md-auto font-weight-normal">Yuto Sasada's Portfolio</h5>
+                <nav class="my-2 my-md-0 mr-md-3">
+                    <a class="p-2 text-dark" href="#">About</a>
+                    <a class="p-2 text-dark" href="#">Experience</a>
+                    <a class="p-2 text-dark" href="#">Education</a>
+                    <a class="p-2 text-dark" href="#">Projects</a>
+                    <a class="p-2 text-dark" href="#">Skills</a>
+                    <a class="p-2 text-dark" href="#">Contact</a>
+                </nav>
+            </div>
+            <!-- End Navigation -->
+
+            {% block header %}{% endblock %}
+
+            {% block contents %}{% endblock %}
+
+            <footer class="py-5 bg-dark">
+                <div class="container">
+                    <p class="m-0 text-left text-white">Copyright &copy; 2020 Yuto Sasada.</p>
+                </div>
+            </footer>
+            <!-- End footer -->
+        </div>
+        <!-- End #wrapper -->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
